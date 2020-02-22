@@ -8,6 +8,17 @@
 */
 /*
     Table of Context
+
+    
+$transBlue: rgba(18, 61, 136, 0.9);
+//$transOrange: rgba(255, 91, 53, 0.9);
+$clrblue: #FF6F48;
+// #FF6F48
+$clrbluedeep: #FF5B35;
+// #FF5B35
+
+//FF6F48
+// FF6F48
     -------------------------------
     01. Common CSS
     02. Content Box
@@ -179,11 +190,11 @@ section {
 }
 
 .btn-filled {
-  background-color: #256be6;
+  background-color: #FF6F48;
 }
 
 .btn-filled:hover {
-  background-color: #123d88;
+  background-color: #FF5B35;
   -webkit-box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.05);
 }
@@ -195,7 +206,7 @@ section {
 }
 
 .btn-default {
-  background-color: #256be6;
+  background-color: #FF6F48;
   border-radius: 50px;
   color: #fff;
   -webkit-transition: all .5s;
@@ -283,7 +294,7 @@ section {
 }
 
 .tagline {
-  color: #256be6;
+  color: #FF6F48;
   display: block;
   font-size: 14px;
   font-weight: 500;
@@ -303,7 +314,7 @@ section {
 }
 
 .tagline.bar:after {
-  background-color: #256be6;
+  background-color: #FF6F48;
   content: '';
   position: absolute;
   top: 50%;
@@ -366,7 +377,7 @@ section {
 }
 
 .roysha-icon span:before {
-  color: #256be6  !important;
+  color: #FF6F48  !important;
 }
 
 /**
@@ -525,7 +536,7 @@ section {
 .video-btn {
   background-color: #fff;
   border-radius: 50%;
-  color: #256be6;
+  color: #FF6F48;
   display: block;
   text-align: center;
   line-height: 60px;
@@ -552,7 +563,7 @@ section {
   animation: beat infinite 1.2s;
   height: 100%;
   width: 100%;
-  background-color: #256be6;
+  background-color: #FF6F48;
   border-radius: 50%;
   z-index: -1;
 }
@@ -598,7 +609,7 @@ section {
 }
 
 .iconBox .icon {
-  color: #256be6;
+  color: #FF6F48;
   font-size: 5em;
   margin-bottom: 20px;
 }
@@ -739,7 +750,7 @@ section {
   background-color: #fff;
   border-radius: 0;
   border-bottom-left-radius: 10px;
-  color: #256be6;
+  color: #FF6F48;
   font-size: 30px;
   min-width: inherit;
   padding: 10px 0;
@@ -751,7 +762,7 @@ section {
 }
 
 .overlap-imgBox .btn:hover {
-  background-color: #256be6;
+  background-color: #FF6F48;
 }
 
 .imgBox {
@@ -863,7 +874,7 @@ section {
 
 .header.fixed-header, .fixed-header.header02, .fixed-header.header03, .fixed-header.header04 {
   position: fixed;
-  background: #123d88;
+  background: #FF5B35;
 }
 
 .header .container, .header02 .container, .header03 .container, .header04 .container {
@@ -882,7 +893,7 @@ section {
 
 @media screen and (max-width: 991px) {
   .header .primary-menu ul, .header02 .primary-menu ul, .header03 .primary-menu ul, .header04 .primary-menu ul {
-    background-color: #256be6;
+    background-color: #FF6F48;
     display: none;
     text-align: left;
     width: 100%;
@@ -978,7 +989,7 @@ section {
   width: 7px;
   height: 1px;
   border-radius: 50%;
-  background: #123d88;
+  background: #FF5B35;
   display: block;
   position: absolute;
   left: 10px;
@@ -994,7 +1005,7 @@ section {
 }
 
 .header .primary-menu ul li.has-menu-child ul.sub-menu a:hover, .header02 .primary-menu ul li.has-menu-child ul.sub-menu a:hover, .header03 .primary-menu ul li.has-menu-child ul.sub-menu a:hover, .header04 .primary-menu ul li.has-menu-child ul.sub-menu a:hover {
-  background-color: #123d88;
+  background-color: #FF5B35;
   color: #fff;
 }
 
@@ -1042,7 +1053,7 @@ section {
     position: relative;
   }
   .header .primary-menu ul li a.login.btn.btn-outline.btn-round:hover span, .header02 .primary-menu ul li a.login.btn.btn-outline.btn-round:hover span, .header03 .primary-menu ul li a.login.btn.btn-outline.btn-round:hover span, .header04 .primary-menu ul li a.login.btn.btn-outline.btn-round:hover span, .header .primary-menu ul li .iconBox a.login.btn.btn-outline:hover span, .iconBox .header .primary-menu ul li a.login.btn.btn-outline:hover span, .header02 .primary-menu ul li .iconBox a.login.btn.btn-outline:hover span, .iconBox .header02 .primary-menu ul li a.login.btn.btn-outline:hover span, .header03 .primary-menu ul li .iconBox a.login.btn.btn-outline:hover span, .iconBox .header03 .primary-menu ul li a.login.btn.btn-outline:hover span, .header04 .primary-menu ul li .iconBox a.login.btn.btn-outline:hover span, .iconBox .header04 .primary-menu ul li a.login.btn.btn-outline:hover span {
-    color: #123d88;
+    color: #FF5B35;
   }
 }
 
@@ -1118,7 +1129,7 @@ section {
 
 @media screen and (min-width: 992px) {
   .header02 .primary-menu .btn, .header03 .primary-menu .btn {
-    background-color: #004bc8;
+    background-color: #FF6F48;
   }
 }
 
@@ -1336,7 +1347,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  background: #004bc8;
+  background: #FF6F48;
   opacity: .7;
 }
 
@@ -1534,7 +1545,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  background: #004bc8;
+  background: #FF5B35;
   opacity: .7;
 }
 
@@ -1667,7 +1678,7 @@ section {
 }
 
 .testimonial .owl-dots .active span {
-  background-color: #256be6;
+  background-color: #FF6F48;
 }
 
 .testimonial-v2 .testimonialBox, .testimonial-v3 .testimonialBox {
@@ -1741,7 +1752,7 @@ section {
 }
 
 .testimonial-v2 .owl-nav button:hover, .testimonial-v3 .owl-nav button:hover {
-  background-color: #256be6 !important;
+  background-color: #FF6F48 !important;
 }
 
 .testimonial-v2 .owl-nav .owl-prev, .testimonial-v3 .owl-nav .owl-prev {
@@ -1780,8 +1791,8 @@ section {
 }
 
 .testimonial-v3 .owl-dots button.active {
-  background-color: #256be6;
-  border-color: #256be6;
+  background-color: #FF6F48;
+  border-color: #FF6F48;
 }
 
 /**
@@ -1792,7 +1803,7 @@ section {
   background-position: center top;
   background-repeat: no-repeat;
   background-image: url("../images/footer-bg.png");
-  background-color: #123d88;
+  background-color: #FF5B35;
   position: relative;
 }
 
@@ -2751,10 +2762,10 @@ section {
  * Our process section
  */
 .our-process .btn {
-  background: #256be6;
+  background: #FF6F48;
   color: #fff;
   margin-top: 65px;
-  border: 1px solid #256be6;
+  border: 1px solid #FF6F48;
 }
 
 .our-process .btn:hover {
@@ -2853,7 +2864,7 @@ section {
 }
 
 .accordion.has-numbering .accordion-item.active:before {
-  background: #256be6;
+  background: #FF6F48;
   color: #fff;
 }
 
@@ -2883,7 +2894,7 @@ section {
 }
 
 .ps-works .video-box:after, .ps-works .video-box-round:after {
-  background-color: #123d88;
+  background-color: #FF5B35;
   -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%);
   max-width: 730px;
@@ -2931,8 +2942,8 @@ section {
 }
 
 .faq-tab .nav a.active {
-  background-color: #256be6;
-  border-color: #256be6;
+  background-color: #FF6F48;
+  border-color: #FF6F48;
   color: #fff;
 }
 
@@ -3207,7 +3218,7 @@ section {
 }
 
 .cmn-tab-nav li a.active {
-  background-color: #256be6;
+  background-color: #FF6F48;
   color: #fff;
 }
 
@@ -3265,8 +3276,8 @@ section {
 }
 
 .list-tab-nav li a.active {
-  border-color: #256be6;
-  color: #256be6;
+  border-color: #FF6F48;
+  color: #FF6F48;
 }
 
 /**
@@ -3361,7 +3372,7 @@ section {
 }
 
 .package-table th {
-  background-color: #256be6;
+  background-color: #FF6F48;
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -3572,7 +3583,7 @@ section {
 }
 
 .contact-info-wrap {
-  background-color: #256be6;
+  background-color: #FF6F48;
   font-size: 15px;
   padding: 100px 40px;
 }
@@ -3599,7 +3610,7 @@ section {
 .contact-info-wrap address i {
   background-color: #fff;
   border-radius: 50%;
-  color: #256be6;
+  color: #FF6F48;
   font-size: 16px;
   line-height: 40px;
   text-align: center;
@@ -3914,7 +3925,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #256be6;
+  background-color: #FF6F48;
   -webkit-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -3951,7 +3962,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #256be6;
+  background-color: #FF6F48;
   -webkit-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -4189,7 +4200,7 @@ section {
  * 404 Error section
  */
 .error-page .header, .error-page .header02, .error-page .header03, .error-page .header04 {
-  background-color: #256be6;
+  background-color: #FF6F48;
   position: relative;
 }
 
@@ -4212,7 +4223,7 @@ section {
 }
 
 .signup-login .sl-slider-caro {
-  background-color: #256be6;
+  background-color: #FF6F48;
   position: relative;
   padding: 10% 0 5%;
 }
@@ -4437,7 +4448,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  background: #004bc8;
+  background: #FF6F48;
   opacity: .7;
 }
 
@@ -4500,7 +4511,7 @@ section {
 }
 
 .coming-sec #clock span {
-  background-color: #256be6;
+  background-color: #FF6F48;
   border-radius: 5px;
   display: block;
   font-size: 30px;
@@ -4592,11 +4603,11 @@ section {
 }
 
 .receive-works .cmn-tab-nav li a.active .nav-arrow {
-  background-color: #256be6;
+  background-color: #FF6F48;
 }
 
 .receive-works .cmn-tab-nav li a.active .nav-arrow:after {
-  background-color: #256be6;
+  background-color: #FF6F48;
 }
 
 /**
