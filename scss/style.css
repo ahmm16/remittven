@@ -65,7 +65,7 @@
     43. Signup Login form section 
     44. Footer
 */
-@import url("https://fonts.googleapis.com/css?family=Rubik:33,430,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=FuturaLt:33,430,500,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -76,7 +76,7 @@
 body {
   color: #6c6c6f;
   background-color: #fff;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'FuturaLt', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 28px;
@@ -97,7 +97,7 @@ a:focus, button:focus, input:focus, select:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'FuturaLt', sans-serif;
   font-weight: 500;
 }
 
@@ -304,7 +304,7 @@ section {
   position: absolute;
   left: 50%;
   top: 50%;
-  background-image: url(../images/preloader.svg);
+  background-image: url(../images/preloader.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

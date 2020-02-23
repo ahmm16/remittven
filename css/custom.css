@@ -1,0 +1,81 @@
+.width100{
+    width: 100%;
+}
+.width50{
+    width: 50%;
+}
+.text-center{
+    text-align: center;
+}
+.colorPrimary{
+    color: #FF6F48;
+}
+
+body{
+    color: #858585;
+}
+.header{
+    /*PROPUESTA 
+    background-color: #EDEDED;
+    */
+    background-color: inherit;
+}
+.header .primary-menu ul li a, .header02 .primary-menu ul li a, .header03 .primary-menu ul li a, .header04 .primary-menu ul li a{
+    color: #858585;
+}.header .primary-menu ul li a:hover, .header02 .primary-menu ul li a:hover, .header03 .primary-menu ul li a:hover, .header04 .primary-menu ul li a:hover{
+    color: #FF6F48;
+}
+.header.fixed-header, .fixed-header.header02, .fixed-header.header03, .fixed-header.header04{
+    background-color: inherit;
+}
+.header .primary-menu ul li a, .header02 .primary-menu ul li a, .header03 .primary-menu ul li a, .header04 .primary-menu ul li a {
+    padding: 5px 15px;
+}
+.primary-menu .btn span{
+    color: inherit;
+}
+/*TODO: Transformar a class en el nuevo css*/
+#signup{
+    padding: 4px 15px;
+    font-size: 14px;
+    margin-top: 9px;
+    background-color: transparent;
+    border: 2px solid #4C5667;
+    color: #4C5667;
+    border-radius: 5px;
+}
+.form-field.selectorZona{
+    width: 50%;
+    margin: 50px auto;
+}
+.form-field.selectorZona .curr-select{
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.containerFormLogin{
+    display: none;
+}
+
+.signup-login{
+    width: 40%;
+    padding: 25px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    margin: -20px 0px 20px 50%;
+    z-index: 100000;
+    background: white;
+}
+.signup-login img{
+    width: 200px;
+}
+.content-box{
+    display: inline-block;
+}
+.containerFormLogin div{
+    margin: auto;
+}
+/*TODO: Pasar a estado en React*/
+#login.active, #signup.active{
+    color: #FF6F48;
+}
