@@ -1,0 +1,64 @@
+$fontFuturaLt: 'FuturaLt',
+sans-serif;
+$fontBold: 700;
+$fontMid: 500;
+$fontLight: 300;
+$transBlack: rgba(18, 61, 136, .1);
+$transBlue: rgba(18, 61, 136, 0.9);
+//$transOrange: rgba(255, 91, 53, 0.9);
+$clrblue: $secondary;
+;
+;
+// #FF6F48
+$clrbluedeep: #123d88;
+// #FF5B35
+$clroffWhite: #f7faff;
+$clrlightBlack: #2f2f35;
+$bx-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+$transition: all 300ms ease-in-out;
+
+@mixin pseudo($t:0, $l:0, $r:0, $b:0) {
+    content: '';
+    position: absolute;
+    top: $t;
+    left: $l;
+    right: $r;
+    bottom: $b;
+}
+
+@mixin transBlack($o:.1) {
+    background-color: rgba(0, 0, 0, $o);
+}
+
+@mixin transBlue($o:.9) {
+    background-color: rgba(18, 61, 136, $o);
+}
+
+@mixin media($w) {
+    @media screen and (max-width: $w+px) {
+        @content;
+    }
+}
+
+@mixin min-media($w:992) {
+    @media screen and (min-width: $w+px) {
+        @content;
+    }
+}
+
+@mixin media-between($mw, $mxw) {
+    @media (min-width: $mw+px) and (max-width: $mxw+px) {
+        @content;
+    }
+}
+
+
+@mixin bg-props($s:cover, $p:center top, $r:no-repeat) {
+    background-size: $s;
+    background-position: $p;
+    background-repeat: $r;
+}
+
+@mixin overlay($i) {
+    background-image: url($i);
+}

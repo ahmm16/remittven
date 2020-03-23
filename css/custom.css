@@ -1,0 +1,150 @@
+.width100 {
+  width: 100%;
+}
+.width50 {
+  width: 50%;
+}
+.text-center {
+  text-align: center;
+}
+.colorPrimary {
+  color: #ff6f48;
+}
+
+body {
+  color: #858585;
+}
+.header {
+  background-color: transparent;
+}
+.header .primary-menu ul li a,
+.header02 .primary-menu ul li a,
+.header03 .primary-menu ul li a,
+.header04 .primary-menu ul li a {
+  color: #fff;
+}
+.header.fixed-header,
+.fixed-header.header02,
+.fixed-header.header03,
+.fixed-header.header04 {
+  background-color: #fff;
+}
+.header.fixed-header ul li a,
+.fixed-header.header02 ul li a,
+.fixed-header.header03 ul li a,
+.fixed-header.header04 ul li a {
+  color: #778692;
+}
+
+.header .primary-menu ul li a:hover,
+.header02 .primary-menu ul li a:hover,
+.header03 .primary-menu ul li a:hover,
+.header04 .primary-menu ul li a:hover {
+  color: #ff6f48;
+}
+.header .primary-menu ul li a,
+.header02 .primary-menu ul li a,
+.header03 .primary-menu ul li a,
+.header04 .primary-menu ul li a {
+  padding: 5px 15px;
+}
+.header .tasas {
+  padding: 20px;
+}
+.header .tasas span {
+  display: block;
+  color: #ff6f48;
+  margin-left: 20px;
+  text-align: center;
+}
+.primary-menu .btn span {
+  color: inherit;
+}
+.form-field.selectorZona {
+  width: 50%;
+  margin: 50px auto;
+}
+.form-field.selectorZona .curr-select {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.containerFormLogin {
+  display: none;
+  width: 400px;
+  top: 90px;
+  right: 40px;
+  position: fixed;
+  z-index: 1000;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #ff6f48;
+}
+.containerFormLogin .form-field {
+  margin-bottom: 20px;
+}
+.containerFormLogin div {
+  margin: auto;
+}
+/*TODO: Pasar a estado en React*/
+#login.active,
+#signup.active {
+  color: #ff6f48;
+}
+.btn-default {
+  min-width: auto;
+  border-radius: 0.25rem;
+  padding: 15px;
+}
+.btn-default:hover {
+  /*color: #4c5667;*/
+}
+.btn-register {
+  min-width: auto;
+  border-radius: 0.25rem;
+  padding: 15px;
+  background-color: #4c5667;
+}
+.btn-register:hover {
+  color: #ff5b35;
+}
+.lang button,
+.lang a {
+  margin-left: 20px;
+  width: 40px;
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  cursor: pointer;
+}
+.lang button i,
+.lang a i {
+  margin: auto 5px;
+  color: #6c6c6f;
+}
+
+.lang .dropdown-menu {
+  background-color: transparent;
+  border: none;
+  left: -20px !important;
+  min-width: 50px !important;
+}
+
+.faq-tab .nav a.active {
+  background-color: #fff;
+  border-color: #ff5b35;
+  color: #4c5667;
+}
+
+.banner.contact:before {
+  background-image: url("https://unsplash.com/photos/jCYpHYIgXE4");
+}
+
+.footer {
+  background-color: #778692;
+}
+
+.switcher {
+  display: none;
+}
