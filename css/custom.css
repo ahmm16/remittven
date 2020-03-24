@@ -10,7 +10,11 @@
 .colorPrimary {
   color: #ff6f48;
 }
-
+i {
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
 body {
   color: #858585;
 }
@@ -18,47 +22,57 @@ body {
   background-color: transparent;
 }
 .header .primary-menu ul li a,
-.header02 .primary-menu ul li a,
-.header03 .primary-menu ul li a,
-.header04 .primary-menu ul li a {
+.header .primary-menu ul li.has-menu-child i {
   color: #fff;
 }
-.header.fixed-header,
-.fixed-header.header02,
-.fixed-header.header03,
-.fixed-header.header04 {
+.header.fixed-header {
   background-color: #fff;
 }
-.header.fixed-header ul li a,
-.fixed-header.header02 ul li a,
-.fixed-header.header03 ul li a,
-.fixed-header.header04 ul li a {
+.header.fixed-header ul li a {
   color: #778692;
 }
 
-.header .primary-menu ul li a:hover,
-.header02 .primary-menu ul li a:hover,
-.header03 .primary-menu ul li a:hover,
-.header04 .primary-menu ul li a:hover {
+.header .primary-menu ul li:hover a,
+.header .primary-menu ul li:hover i {
   color: #ff6f48;
 }
-.header .primary-menu ul li a,
-.header02 .primary-menu ul li a,
-.header03 .primary-menu ul li a,
-.header04 .primary-menu ul li a {
+.header .primary-menu ul li a {
   padding: 5px 15px;
 }
-.header .tasas {
-  padding: 20px;
-}
-.header .tasas span {
-  display: block;
+.header .primary-menu ul li.has-menu-child ul.sub-menu a:hover {
+  background-color: #e0dfde;
   color: #ff6f48;
-  margin-left: 20px;
-  text-align: center;
 }
-.primary-menu .btn span {
-  color: inherit;
+.header .responsive-block {
+  display: inherit;
+}
+.header .responsive-block #login {
+  margin: 0px !important;
+}
+@media only screen and (max-width: 992px) {
+  .header .responsive-block {
+    position: absolute;
+    right: 65px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+.header #login-mobile,
+.header #lang-mobile {
+  display: none;
+}
+@media only screen and (max-width: 500px) {
+  .header .responsive-block {
+    display: none;
+  }
+  .header #login-mobile,
+  .header #lang-mobile {
+    display: block;
+  }
+}
+@media only screen and (min-width: 500px) {
 }
 .form-field.selectorZona {
   width: 50%;

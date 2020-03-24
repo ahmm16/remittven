@@ -1,4 +1,4 @@
-<html lang="es" style="">
+<html lang="es">
 
 <head>
   <!-- Required meta tags -->
@@ -39,40 +39,53 @@
   <!-- Header start -->
   <header class="header">
     <div class="container d-flex align-items-center">
-      <a class="logo" href="home.html">
-        <img src="images/logo3.png" alt="">
+      <a class="logo" href="index.html">
+        <img src="images/logo3.png" alt="logo - desktop">
       </a>
-      <nav class="primary-menu ">
+      <nav class="primary-menu text-md-right">
         <a id="mobile-menu-toggler" href="#"><i class="fas fa-bars"></i></a>
         <ul>
-          <li><a href="#como-funciona">¿Cómo funciona?</a></li>
+          <li class="current-menu-item has-menu-child"><a href="#como-funciona">¿Cómo funciona?</a>
+            <ul class="sub-menu">
+              <li><a href="#">Instrucciones</a></li>
+              <li><a href="#">Requisitos</a></li>
+              <li><a href="#">Empresas</a></li>
+            </ul>
+          </li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="contact.html">Contacto</a></li>
+          <li id="login-mobile"><a href="login.html">Login</a></li>
+          <li id="lang-mobile" class="current-menu-item has-menu-child"><a href="#">Español</a>
+            <ul class="sub-menu">
+              <li><a href="#">Inglés</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
-      <a href="login.html" id="login" class="btn btn-default">
-        <span class="bh"></span>
-        <span>Login</span>
-      </a>
-      <div class="dropdown lang">
-        <a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-            src="images/flags/ven.png" alt=""><i class="fas fa-caret-down"></i></a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a><img src="images/flags/uk.png" alt=""></a>
+      <div class="responsive-block">
+        <a href="login.html" id="login" class="btn btn-default">
+          <span class="bh"></span>
+          <span>Login</span>
+        </a>
+        <div class="dropdown lang">
+          <a id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+              src="images/flags/spain.png" alt=""><i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a><img src="images/flags/uk.png" alt=""></a>
+          </div>
         </div>
       </div>
     </div>
   </header>
   <!-- Header end -->
 
-  <!-- Banner section start -->
+  <!-- Home Banner START -->
   <section class="banner v2">
     <div class="container">
       <div class="row ">
         <div class="col-lg-7 col-md-12">
           <div class="ban-content">
             <h1>Envía dinero a Venezuela<br> Desde<br> El Reino Unido</h1>
-
           </div>
         </div>
         <div class="col-lg-5 col-md-12">
@@ -97,6 +110,7 @@
                   </div>
                   <div class="currency-text">
                     <span>Tasa de Cambio: <strong id="rate"></strong></span>
+                    <input type="hidden" id="rateVal" name="rateVal" placeholder="">
                     <span><strong>£0.00</strong> Comisión</span>
                   </div>
                   <div class="form-field">
@@ -116,13 +130,12 @@
                       &amp; Policy</a></span>
                 </form>
               </div>
-
               <div id="sign-up" class="tab-pane fade">
-                <form class="" action="#">
+                <form class="" action="signup.html">
                   <div class="form-field">
-                    <label>Nombre</label>
+                    <label for="name">Nombre</label>
                     <div class="join-field">
-                      <input type="text" name="name" placeholder="Nombre">
+                      <input type="text" id="name" name="name" placeholder="Nombre">
                     </div>
                   </div>
                   <div class="form-field">
@@ -134,34 +147,25 @@
                   <div class="form-field">
                     <label>Email</label>
                     <div class="join-field">
-                      <input type="text" name="email" placeholder="Email">
+                      <input type="text" id="email" name="email" placeholder="Email">
                     </div>
                   </div>
-                  <div class="form-field">
-                    <label>Contraseña</label>
-                    <div class="join-field">
-                      <input type="text" name="password" placeholder="Apellido">
-                    </div>
-                  </div>
-                  <div class="form-field">
+                  <!-- <div class="form-field">
                     <label for="del_type">País de Residencia</label>
                     <select id="del_type" name="del_type">
                       <option>Escoja un País</option>
                       <option value="GB">Reino Unido</option>
                     </select>
-                  </div>
-                  <div class="form-field">
-                    <label>Fecha de nacimiento</label>
-                    <div class="join-field">
-                      <input type="date" name="dob" placeholder="Fecha de nacimiento">
-                    </div>
-                  </div>
-                  <a href="signup.html" id="signup" class="btn btn-block btn-filled form-btn">
+                  </div> -->
+                  <!-- <a href="signup.html" id="signup" class="btn btn-block btn-filled form-btn">
                     <span class="bh"></span>
                     <span>Regístrate</span>
-                  </a>
+                  </a> -->
+                  <button class="btn btn-block btn-filled form-btn">
+                    <span class="bh"></span> <span>Regístrate<i class="fas fa-arrow-right"></i></span>
+                  </button>
                   <span class="accept-terms">Revisa nuestros Terminos y Condiciones
-                    <a href="#">Terms &amp; Policy</a>
+                    <a href="signup.html">Terms &amp; Policy</a>
                   </span>
                 </form>
               </div>
@@ -171,9 +175,11 @@
       </div>
     </div>
   </section>
-  <!-- Banner section end -->
+  <!-- Home Banner END -->
 
-  <!-- Overview section start -->
+  <!-- Cómo funciona 1) 2) START -->
+
+  <!-- 1) -->
   <section class="services">
     <div class="container">
       <div class="row">
@@ -243,6 +249,218 @@
       </div>
     </div>
   </section>
+
+  <!-- 2) -->
+  <section class="receive-works bg-offwhite">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 m-auto">
+          <div class="sec-heading">
+            <span class="tagline">Proceso</span>
+            <h2 class="sec-title">¿Cómo Funciona?</h2>
+            <p class="sec-subtitle">En cuatro simples pasos envía dinero a Venezuela como nunca antes lo habias hecho
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <ul class="nav nav-tabs cmn-tab-nav">
+            <li>
+              <a class="active" data-toggle="tab" href="#get-payment">Regístrate
+                <span class="nav-arrow"></span>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="#find-location">Identificación
+                <span class="nav-arrow"></span>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="#insert-code">Crea tu Envío
+                <span class="nav-arrow"></span>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="tab" href="#cash-pickup">Recibe en Venezuela</a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="get-payment" class="tab-pane fade in active show">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <figure class="imgBox">
+                    <img src="images/illustrations/1.png" alt="">
+                  </figure>
+                </div>
+                <div class="col-md-6">
+                  <div class="content-box">
+                    <h2>Regístrate con nosotros</h2>
+                    <p>Llena tus datos en nuestra sección de registro, confirma tu correo electrónico. Recuerda siempre
+                      revisar tu correo no deseado.</p>
+                    <p>Sigue el enlace en tu correo de confrimación para continuar con el registro.</p>
+                    <a href="#" class="btn btn-filled btn-round"><span class="bh"></span> <span>Registro</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="find-location" class="tab-pane fade">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="content-box">
+                    <h2>Proporciona un documento de Identificación</h2>
+                    <p>Mediante nuestro avazado proceso de verificación de identidad podrás subir tu pasaporte, licencia
+                      o identificación en segundos. Recuerda que tu status migratorio no es un requisito para el uso de
+                      Remittven</p>
+                    <ul class="steps vertical">
+                      <li>
+                        <span>1</span>
+                        Documento
+                        <p>Toma de una foto de tu documento. Pasaporte, licencia, Documento nacional, ETC</p>
+                      </li>
+                      <li>
+                        <span>2</span>
+                        Selfie
+                        <p>Toma una selfie para corroborar tu identidad</p>
+                      </li>
+                      <li>
+                        <span>3</span>
+                        15 Segundos
+                        <p>Identidad comprobada ya puedes usar RemittVen!</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <figure class="imgBox">
+                    <img src="images/deposit-map.png" alt="">
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div id="insert-code" class="tab-pane fade">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="content-box">
+                    <h2>Crea tu Envío</h2>
+                    <p>En tu panel podrás crear beneficiarios frecuentes, añadir tarjetas de débito y crear
+                      transferencias.</p>
+                    <p>Trabajamos con todos los bancos en Venezuela. </p>
+                    <a href="#" class="btn btn-filled btn-round"><span class="bh"></span> <span>Ingresa</span></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <figure class="imgBox">
+                    <img src="images/internet-bill.png" alt="">
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div id="cash-pickup" class="tab-pane fade">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <div class="content-box">
+                    <h2>Give Your Information to Sender</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                    <ul class="steps vertical">
+                      <li>
+                        <span>1</span>
+                        Find a Nearest Location or Wallet
+                        <p>Lorem ipsum qitame coctetr asipm scing elised eiusm tempor incidid untdolore consistal.</p>
+                      </li>
+                      <li>
+                        <span>2</span>
+                        Confirm Your Identity or Access Wallet
+                        <p>Lorem ipsum qitame coctetr asipm scing elised eiusm tempor incidid untdolore consistal.</p>
+                      </li>
+                      <li>
+                        <span>3</span>
+                        Confirm Your Access and Request Payment
+                        <p>Lorem ipsum qitame coctetr asipm scing elised eiusm tempor incidid untdolore consistal.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <figure class="imgBox">
+                    <img src="images/app-img.png" alt="">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cómo funciona END -->
+
+  <!-- speciality section start -->
+  <section class="speciality bg-offwhite">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 m-auto">
+          <div class="sec-heading">
+            <span class="tagline">REMITTVEN</span>
+            <h2 class="sec-title">Todo en un mismo lugar</h2>
+            <p class="sec-subtitle"></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="iconBox boxed-shadow text-center">
+            <!-- <img src="images/icons/1.png" alt="" class="img-icon"> -->
+
+            <!-- Roysha icon -->
+            <span class="roysha-icon roysha-encrypted"><span class="path1"></span><span class="path2"></span><span
+                class="path3"></span><span class="path4"></span><span class="path5"></span><span
+                class="path6"></span><span class="path7"></span><span class="path8"></span><span
+                class="path9"></span><span class="path10"></span><span class="path11"></span><span
+                class="path12"></span><span class="path13"></span></span>
+
+            <h5><a href="#">Pago con tarjeta de Débito</a></h5>
+            <p>Aceptamos todas las tarjetas emitidas en el Reino Unido</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="iconBox boxed-shadow text-center">
+            <!-- <img src="images/icons/2.png" alt="" class="img-icon"> -->
+
+            <!-- Roysha icon -->
+            <span class="roysha-icon roysha-money-tracking"><span class="path1"></span><span class="path2"></span><span
+                class="path3"></span><span class="path4"></span><span class="path5"></span><span
+                class="path6"></span><span class="path7"></span><span class="path8"></span><span
+                class="path9"></span><span class="path10"></span><span class="path11"></span><span
+                class="path12"></span><span class="path13"></span><span class="path14"></span><span
+                class="path15"></span></span>
+
+            <h5><a href="#">Documentos</a></h5>
+            <p>Comprobantes de transferencias para tramites y manutención.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="iconBox boxed-shadow text-center">
+            <!-- <img src="images/icons/3.png" alt="" class="img-icon"> -->
+
+            <!-- Roysha icon -->
+            <span class="roysha-icon roysha-hand-cash"><span class="path1"></span><span class="path2"></span><span
+                class="path3"></span><span class="path4"></span><span class="path5"></span><span
+                class="path6"></span><span class="path7"></span><span class="path8"></span><span
+                class="path9"></span><span class="path10"></span></span>
+
+            <h5><a href="#">Libras a Bolívares</a></h5>
+            <p>De Libras Esterlinas a Bolívares soberanos en horas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- speciality section end -->
+
+  <!-- Overview section START -->
   <section class="overview">
     <div class="container">
       <div class="row align-items-center">
@@ -326,7 +544,154 @@
       </div>
     </div>
   </section>
-  <!-- Overview section end -->
+  <!-- Overview section END -->
+
+  <!-- Home send money section start -->
+  <section class="home-send-money bg-offwhite">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 m-auto">
+          <div class="sec-heading">
+            <span class="tagline">Comprobantes</span>
+            <h2 class="sec-title">Justifica manuntención con nosotros</h2>
+            <p class="sec-subtitle">Con Remittven podrás obtener recibos válidos para la obtención de Visas, permisos
+              familiares y comprobar manutención de familiares.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-md-center">
+        <div class="col-md-5">
+          <div class="mbl-screen">
+            <!-- <figure class="mbl-scrn1">
+                <img src="images/mbl-scrn1.png" alt="">
+              </figure>
+              <figure class="mbl-scrn2">
+                <img src="images/mbl-scrn2.png" alt="" >
+              </figure> -->
+            <img src="images/an1/3.png" alt="" class="an1 animg3">
+            <img src="images/an1/5.png" alt="" class="an1 animg5">
+            <!-- <img src="images/an1/4.png" alt="" class="an1 animg4"> -->
+          </div>
+        </div>
+        <div class="col-md-6 offset-md-1">
+          <div class="content-box">
+            <span class="tagline bar">Manutención</span>
+            <h2>Comprobantes</h2>
+            <p>En algunos casos es muy difícil comprobar los ingresos de tus familiares debido a la falta de
+              documentación provista por los entes financieros en América Latina. </p>
+            <p>Con Remittven podrás obtener tus recibos de manutención con los que podrás obtener visas, permisos u otro
+              documento que requiera origen de fondos.</p>
+            <a href="#" class="btn btn-default"><span class="bh"></span> <span>Resgitro</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Home send money section end -->
+
+  <!-- Services section start -->
+  <section class="services">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 m-auto">
+          <div class="sec-heading">
+            <span class="tagline">Nuestros Servicios</span>
+            <h2 class="sec-title">Recibimos Libras, enviamos Bolívares</h2>
+            <p class="sec-subtitle">Somos los expertos en el Reino Unido convirtiendo Libras Esterlinas a Bolívares
+              Soberanos. Recibimos tarjetas de débito y depositamos en cuentas corrientes en Venezuela.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="iconBox boxed text-center">
+            <!-- <img src="images/icons/1.png" alt="" class="img-icon"> -->
+
+            <!-- Roysha icon -->
+            <span class="roysha-icon roysha-safe"><span class="path1"></span><span class="path2"></span><span
+                class="path3"></span><span class="path4"></span><span class="path5"></span><span
+                class="path6"></span><span class="path7"></span><span class="path8"></span><span
+                class="path9"></span><span class="path10"></span></span>
+
+            <h5><a href="#">FCA REGULATED</a></h5>
+            <p>Estamos regulados por la Financial Conduct Authority lo que garantiza su seguridad.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="iconBox boxed text-center">
+            <!-- <img src="images/icons/2.png" alt="" class="img-icon"> -->
+
+            <!-- Roysha icon -->
+            <span class="roysha-icon roysha-mobile-bank"><span class="path1"></span><span class="path2"></span><span
+                class="path3"></span><span class="path4"></span><span class="path5"></span><span
+                class="path6"></span><span class="path7"></span><span class="path8"></span><span
+                class="path9"></span><span class="path10"></span><span class="path11"></span><span
+                class="path12"></span><span class="path13"></span><span class="path14"></span></span>
+
+            <h5><a href="#">GDPR</a></h5>
+            <p>Nos apegamos a las mas estrictas políticas de seguridad de datos cumpliendo con todas las normas.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="iconBox boxed text-center">
+            <!-- <img src="images/icons/3.png" alt="" class="img-icon"> -->
+
+            <!-- Roysha icon -->
+            <span class="roysha-icon roysha-money-tracking"><span class="path1"></span><span class="path2"></span><span
+                class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+
+            <h5><a href="#">AML</a></h5>
+            <p>Seguimos los estandares mundiales Anti Lavado de Dinero garantizando la transparencia de nuestras
+              operaciones.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="iconBox boxed text-center">
+            <!-- <img src="images/icons/1.png" alt="" class="img-icon"> -->
+
+            <!-- Roysha icon -->
+            <span class="roysha-icon roysha-support"><span class="path1"></span><span class="path2"></span><span
+                class="path3"></span><span class="path4"></span><span class="path5"></span><span
+                class="path6"></span><span class="path7"></span><span class="path8"></span><span
+                class="path9"></span><span class="path10"></span><span class="path11"></span><span
+                class="path12"></span><span class="path13"></span><span class="path14"></span><span
+                class="path15"></span><span class="path16"></span></span>
+
+            <h5><a href="#">LIVE CHAT</a></h5>
+            <p>Chat en vivo y seguimiento de las sus operaciones para brindar más confianza en todos nuestros procesos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services section end -->
+
+  <!-- Access money section start -->
+  <section class="access-money">
+    <div class="container-fluid">
+      <div class="row align-items-md-center">
+        <div class="col-md-6">
+          <div class="content-box-fluid right">
+            <span class="tagline bar">Seguimiento</span>
+            <h2>Envía dinero desde cualquier dispositivo en el Reino Unido</h2>
+            <p>En el autobus, en el tren, en el tube o desde el pub, envía dinero a tus familiares y amigos desde
+              cualquier dispositivo con conexión a internet.</p>
+            <p>Hazle seguimiento a tus envíos desde tu panel Remittven, repite transferencias, descarga comprobantes y
+              más!</p>
+            <a href="#" class="btn btn-default"><span class="bh"></span> <span>Ingresa</span></a>
+          </div>
+        </div>
+        <div class="col-md-6 nopadd-rth">
+          <figure class="video-box round-os">
+            <img src="images/banner/3.jpg" alt="">
+
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Access money section end -->
 
   <!-- Payment service section start -->
   <section class="video">
@@ -344,6 +709,36 @@
     </div>
   </section>
   <!-- Payment service section end -->
+
+  <!-- Payment section start -->
+  <section class="payment bg-offwhite">
+    <div class="container">
+      <div class="row align-items-md-center">
+        <div class="col-md-6">
+          <figure class="pay-img">
+            <img src="images/an3/3.png" alt="" class="an3">
+            <img src="images/an3/4.png" alt="" class="an3">
+            <img src="images/an3/5.png" alt="" class="an3">
+            <img src="images/an3/6.png" alt="" class="an3">
+            <img src="images/online-payment.png" alt="">
+
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <div class="content-box">
+            <span class="tagline bar">Misión</span>
+            <h2>Ser tu aliado</h2>
+            <p>Nuestra misión es ser tu aliado y socio. En un futuro, esperamos que cercano, cuando no sea necesario
+              ayudar sino invertir, Remittven quiere convertirse en la primera opción a la hora de transferir el fruto
+              de tu trabajo a Venezuela. </p>
+            <p>Si algún día quieres regresar, cuenta con nosotros para asesoramiento de inversiones en Venezuela.</p>
+            <a href="#" class="btn btn-default"><span class="bh"></span> <span>Más Información</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Payment section end -->
 
   <!-- Partners section start -->
   <section class="partners">
@@ -415,7 +810,85 @@
   </section>
   <!-- Partners section end -->
 
-  <!-- Faq section start -->
+  <!-- Access money section start -->
+  <section class="access-money bg-offwhite">
+    <div class="container">
+      <div class="row align-items-md-center">
+        <div class="col-md-6">
+          <div class="content-box-fluid">
+            <h2>Viaja a Venezuela y cambia sólo lo que necesitas</h2>
+            <p>Si eres residente en el Reino Unido y viajas a Venezuela puedes ingresar a Remittven en todo momento y
+              cambiar diariamente lo que necesitas.</p>
+            <p> Recibe los fondos en la cuenta del banco de tu preferencia y utilízalos como gustes, si necesitas
+              cambiar mas, aqui estaremos!</p>
+            <a href="#" class="btn btn-default"><span class="bh"></span> <span>Ingresa</span></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5 offset-lg-1">
+          <div class="overlap-imgBox">
+            <figure class="img-1">
+              <img src="images/mbl-scrn3.jpg" alt="">
+            </figure>
+            <figure class="img-2 abs-img">
+              <img src="images/mbl-scrn4.png" alt="">
+            </figure>
+            <a href="#" class="btn"><span class="bh"></span> <span>&#10230;</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Access money section end -->
+
+  <!-- Online payment section start -->
+  <section class="online-payment">
+    <div class="container-fluid">
+      <div class="row align-items-md-center">
+        <div class="col-md-6 nopadd-rth">
+          <figure class="imgBox">
+            <!-- <img src="images/laptop.png" alt=""> -->
+            <img src="images/ani4/2.png" alt="" class="ani4 ani4img1">
+            <img src="images/ani4/3.png" alt="" class="ani4 ani4img2">
+            <img src="images/ani4/1.png" alt="" class="ani4">
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <div class="content-box-fluid left">
+            <h2>Sistema automatizado de verificación biométrica</h2>
+            <p> Gracias a nuestro sistema de verificación biométrica automatizada, tu registro será mucho mas sencillo
+              de lo que piensas. A traves de tu teléfono movil carga y verifica la imagen de tu identificación en
+              segundos.</p>
+            <p> Todos estos procesos estan en concordancia con las últimas leyes y regulaciones GDPR y protección de
+              datos. Con RemittVen tus datos están seguros! </p>
+            <a href="#" class="btn btn-default"><span class="bh"></span> <span>Pruébalo!</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Online payment section end -->
+
+  <!-- Features section start -->
+  <section class="features">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 col-md-9 m-auto">
+          <div class="sec-heading text-center">
+            <h2 class="sec-title">Eventos</h2>
+            <p class="sec-subtitle">Patrocinamos los eventos más importantes de la comunidad en el Reino Unido.</p>
+          </div>
+        </div>
+      </div>
+      <div class="features-scrns">
+        <figure class="scrn-1"><img src="images/scrn-1.png" alt=""></figure>
+        <figure class="scrn-2"><img src="images/scrn-2.png" alt=""></figure>
+        <figure class="scrn-3"><img src="images/scrn-3.png" alt=""></figure>
+      </div>
+    </div>
+  </section>
+  <!-- Features section end -->
+
+  <!-- Preguntas frecuentes START -->
   <section class="faq-tab bg-offwhite">
     <div class="container">
       <div class="row">
@@ -433,7 +906,7 @@
         <div class="col-lg-10 col-md-12 m-auto">
           <ul class="row nav nav-tabs">
             <li class="col-md-3">
-              <a class="" data-toggle="tab" href="#general-qs">
+              <a class="active" data-toggle="tab" href="#general-qs">
                 <!-- <img src="images/icons/9.png" alt=""> -->
 
                 <!-- Roysha icon -->
@@ -457,7 +930,7 @@
               </a>
             </li>
             <li class="col-md-3">
-              <a data-toggle="tab" href="#mbl-banking" class="active">
+              <a data-toggle="tab" href="#mbl-banking" class="">
                 <!-- <img src="images/icons/11.png" alt=""> -->
 
                 <!-- Roysha icon -->
@@ -490,13 +963,14 @@
           </ul>
 
           <div class="tab-content">
-            <div id="general-qs" class="tab-pane fade in">
+
+            <div id="general-qs" class="tab-pane fade in active show">
               <div class="accordion" id="accordion">
                 <div class="accordion-item">
                   <h5 class="collapsed" data-toggle="collapse" data-target="#faq-1" aria-expanded="true">
                     ¿En cuánto tiempo el beneficiario recibe el dinero?
                   </h5>
-                  <div id="faq-1" class="collapse" data-parent="#accordion">
+                  <div id="faq-1" class="collapse show" data-parent="#accordion">
                     <div class="acr-body">
                       <p>90% de nuestras transferencias estarán efectivas antes de las 24
                         Horas
@@ -511,8 +985,7 @@
                   <h5 class="collapsed" data-toggle="collapse" data-target="#faq-2" aria-expanded="false">
                     ¿Qué son horas hábiles bancarias?
                   </h5>
-
-                  <div id="faq-2" class="collapse show" data-parent="#accordion">
+                  <div id="faq-2" class="collapse" data-parent="#accordion">
                     <div class="acr-body">
                       <p>Son todas aquellas horas que trabajan los bancos en Venezuela. No
                         debes
@@ -571,7 +1044,7 @@
                   <h5 class="collapsed" data-toggle="collapse" data-target="#tm-1" aria-expanded="true">
                     ¿Cuál es la tasa de cambio?
                   </h5>
-                  <div id="tm-1" class="collapse" data-parent="#accordion">
+                  <div id="tm-1" class="collapse show" data-parent="#accordion">
                     <div class="acr-body">
                       <p>Nuestra tasa de cambio esta actualizada 24 hoars al día y la puedes
                         revisar cuando gustes sin necesidad de inscribirte al comienzo de
@@ -584,7 +1057,7 @@
                     ¿Trabajan con otros paises?
                   </h5>
 
-                  <div id="tm-2" class="collapse show" data-parent="#accordion">
+                  <div id="tm-2" class="collapse" data-parent="#accordion">
                     <div class="acr-body">
                       <p>Muy pronto trabajaremos con otros paises, de momento solamente con el
                         Reino Unido y Venezuela.</p>
@@ -605,13 +1078,13 @@
                 </div>
               </div>
             </div>
-            <div id="mbl-banking" class="tab-pane fade active show">
+            <div id="mbl-banking" class="tab-pane fade ">
               <div class="accordion" id="accordion2">
                 <div class="accordion-item">
-                  <h5 class="collapsed" data-toggle="collapse" data-target="#mblb-1" aria-expanded="true">
+                  <h5 class="collapsed" data-toggle="collapse" data-target="#mblb-1" aria-expanded="false">
                     ¿Con que formas de pago cuento?
                   </h5>
-                  <div id="mblb-1" class="collapse" data-parent="#accordion">
+                  <div id="mblb-1" class="collapse show" data-parent="#accordion">
                     <div class="acr-body">
                       <p>Todas tus transferencias pueden ser abonadas con Tarjeta de débito o
                         Crédito. Adicionalmente podrás realizar transferencias a nuestras
@@ -624,7 +1097,7 @@
                     ¿Cómo recibe el dinero mi beneficiario?
                   </h5>
 
-                  <div id="mblb-2" class="collapse show" data-parent="#accordion">
+                  <div id="mblb-2" class="collapse" data-parent="#accordion">
                     <div class="acr-body">
                       <p>El dinero se recibe en una cuenta bancaria en bolivares en Venezuela.
                       </p>
@@ -650,7 +1123,7 @@
                   <h5 class="collapsed" data-toggle="collapse" data-target="#fc-1" aria-expanded="true">
                     ¿Cuánto cuesta enviar dinero?
                   </h5>
-                  <div id="fc-1" class="collapse" data-parent="#accordion">
+                  <div id="fc-1" class="collapse show" data-parent="#accordion">
                     <div class="acr-body">
                       <p>Nuestras comisiones y costos están incluidas en la tasa de cambio que
                         te
@@ -663,7 +1136,7 @@
                     ¿Cobrán comisión?
                   </h5>
 
-                  <div id="fc-2" class="collapse show" data-parent="#accordion">
+                  <div id="fc-2" class="collapse" data-parent="#accordion">
                     <div class="acr-body">
                       <p>No cobramos comisión.</p>
                     </div>
@@ -692,73 +1165,160 @@
   <!-- Faq section end -->
 
   <!-- Testimonial section start -->
-  <section class="testimonial-v2">
+  <section class="testimonial">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 m-auto">
           <div class="sec-heading">
-            <h2 class="sec-title">Reviews</h2>
-            <p class="sec-subtitle">Lo más importante para nostros son las opiniones de nuestros
-              usuarios.
-              Nos ayudan a mejorar y sentir que nuestros trabajo cuenta!</p>
+            <span class="tagline">Reviews</span>
+            <h2 class="sec-title">Lo que dicen los usuarios de nosotros</h2>
+            <p class="sec-subtitle">Lo más importante para nostros son las opiniones de nuestros usuarios. Nos ayudan a
+              mejorar y sentir que nuestros trabajo cuenta!</p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-10 col-md-12 m-auto">
-          <div class="testimonialBox">
-            <span class="quote-sign"><i class="fas fa-quote-left"></i></span>
-            <div class="test-caro-2 owl-carousel owl-loaded owl-drag" data-slider-id="1">
-
-
-
-              <div class="owl-stage-outer">
-                <div class="owl-stage"
-                  style="transform: translate3d(-1720px, 0px, 0px); transition: all 0.5s ease 0s; width: 2580px;">
-                  <div class="owl-item" style="width: 860px;">
-                    <div class="single-testimonial">
-                      <p>"Seguro y confiable. Lo recomiendo sin reparos"</p>
-                    </div>
-                  </div>
-                  <div class="owl-item" style="width: 860px;">
-                    <div class="single-testimonial">
-                      <p>"Nunca había utilizado un servicio así. Super fácil. Toda la
-                        información
-                        está en la página web, te registras, registras la cuenta venezolana
-                        y
-                        luego es super sencillo el procedimiento. En horas tenía el dinero
-                        en
-                        Venezuela! Super recomendado!""</p>
-                    </div>
-                  </div>
-                  <div class="owl-item active" style="width: 860px;">
-                    <div class="single-testimonial">
-                      <p>"EXCELENTES!! súper rápido y sencillo todo claro paso a paso y si
-                        usted
-                        es un poco no muy ducho con la tecnología ellos son súper pacientes
-                        en
-                        ayudarle sin ningún problema. Me encanto el servicio. Los recomiendo
-                        1000000%"</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i
-                    class="fas fa-arrow-left"></i></button><button type="button" role="presentation"
-                  class="owl-next disabled"><i class="fas fa-arrow-right"></i></button></div>
-              <div class="owl-dots disabled"></div>
-            </div>
-            <div class="client-thumb owl-thumbs" data-slider-id="1">
-              <a href="javascript:void(0)" class="owl-thumb-item"><img src="images/avatar.png" alt=""></a>
-              <a href="javascript:void(0)" class="owl-thumb-item"><img src="images/avatar.png" alt=""></a>
-              <a href="javascript:void(0)" class="owl-thumb-item active"><img src="images/avatar.png" alt=""></a>
-            </div>
+      <div class="test-caro owl-carousel">
+        <div class="single-testimonial">
+          <div class="tst-body">
+            "Seguro y confiable. Lo recomiendo sin reparos"
+          </div>
+          <div class="tst-head">
+            <img src="images/avatar.png" class="avatar" alt="">
+            <h6>Paula Vazquez</h6>
+            <span>Facebook</span>
+          </div>
+        </div>
+        <div class="single-testimonial">
+          <div class="tst-body">
+            "Nunca había utilizado un servicio así. Super fácil. Toda la información está en la página web, te
+            registras, registras la cuenta venezolana y luego es super sencillo el procedimiento. En horas tenía el
+            dinero en Venezuela! Super recomendado!"
+          </div>
+          <div class="tst-head">
+            <img src="images/avatar.png" class="avatar" alt="">
+            <h6>Oswaldo Diaz</h6>
+            <span>Instagram</span>
+          </div>
+        </div>
+        <div class="single-testimonial">
+          <div class="tst-body">
+            "EXCELENTES!! súper rápido y sencillo todo claro paso a paso y si usted es un poco no muy ducho con la
+            tecnología ellos son súper pacientes en ayudarle sin ningún problema. Me encanto el servicio. Los recomiendo
+            1000000%"
+          </div>
+          <div class="tst-head">
+            <img src="images/avatar.png" class="avatar" alt="">
+            <h6>Vanessa Molina</h6>
+            <span>Trust Pilot</span>
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Testimonial section end -->
+
+  <!-- Redes sociales section start -->
+  <!-- TODO: refactorizar clases de esta seccion -->
+  <section class="video-post">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 m-auto">
+          <div class="sec-heading">
+            <span class="tagline">Redes Sociales</span>
+            <h2 class="sec-title">Siguenos en nuestras Redes</h2>
+            <p class="sec-subtitle">Para promociones, tasas de cambio, nuevos destinos e información de interés,
+              síguenos en nuestras redes sociales.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <figure class="video-box-round">
+            <blockquote class="twitter-tweet">
+              <p lang="und" dir="ltr"><a href="https://t.co/ofVaCSVOgV">pic.twitter.com/ofVaCSVOgV</a></p>&mdash;
+              Remittven (@remittven) <a
+                href="https://twitter.com/remittven/status/1234860586682454017?ref_src=twsrc%5Etfw">March 3, 2020</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure class="video-box-round">
+            <img src="images/posts/3.png" alt="">
+
+          </figure>
+        </div>
+        <div class="col-md-4">
+          <figure class="video-box-round">
+            <img src="images/posts/3f.png" alt="">
+
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Redes sociales section end -->
+
+  <!-- App section start -->
+  <section class="app bg-offwhite">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="content-box">
+            <h2>Descarga nuestras nuevas aplicaciones.</h2>
+            <p>Remittven trae para ti la manera mas cómoda de transferir dinero. Descarga nuestras aplicaciones y accede
+              mas rápido a consultar tasa de cambio, registrarte, ingresar a tu cueenta y enviar dinero!</p>
+            <ul class="list">
+              <li><i class="fas fa-check-circle"></i> Tasa de cambio en tiempo real</li>
+              <li><i class="fas fa-check-circle"></i> Utiliza Apple Pay o Google Pay para tus operaciones</li>
+              <li><i class="fas fa-check-circle"></i> Recibe notificaciones en tu movil</li>
+            </ul>
+            <a href="#" class="btn btn-default icon-left"><span class="bh"></span> <span><i class="fab fa-android"></i>
+                Google play</span></a>
+            <a href="#" class="btn btn-default icon-left"> <span class="bh"></span> <span><i
+                  class="fab fa-apple"></i>App store</span></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <figure class="imgBox">
+            <!-- <img src="images/app-img.png" alt=""> -->
+            <img src="images/ani5/1.png" alt="" class="ani5 ani5img1">
+            <img src="images/ani5/2.png" alt="" class="ani5 ani5img2">
+            <img src="images/ani5/3.png" alt="" class="ani5 ani5img3">
+            <img src="images/ani5/4.png" alt="" class="ani5 ani5img4">
+            <img src="images/ani5/5.png" alt="" class="ani5 ani5img5">
+            <img src="images/ani5/6.png" alt="" class="ani5 ani5img6">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- App section end -->
+
+  <!-- Home receive money section start -->
+  <section class="home-recv-money">
+    <div class="container-fluid">
+      <div class="row align-items-md-center">
+        <div class="col-md-6">
+          <div class="content-box-fluid right">
+            <span class="tagline bar">Dispositivos</span>
+            <h2>Ingresa desde cualquier dispositivo</h2>
+            <p>Nuestro website te permite ingresar desde tu Pc de escritorio, laptop, tablet o Smartphone.</p>
+            <p>Sólo es necesario una conexión a Internet. Pronto nuestras aplicaicones moviles para IOs y Android. </p>
+            <a href="#" class="btn btn-default"><span class="bh"></span> <span>Más Información</span></a>
+          </div>
+        </div>
+        <div class="col-md-6 nopadd-rth">
+          <figure class="recv-img">
+            <img src="images/an2/1.png" alt="">
+            <img src="images/an2/2.png" alt="" class="rcvMobile">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Home receive money section end -->
 
   <!-- Footer start -->
   <footer class="footer">
