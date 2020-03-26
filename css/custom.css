@@ -50,6 +50,14 @@ body {
   margin: 0px !important;
 }
 @media only screen and (max-width: 992px) {
+  .header .primary-menu ul li a,
+  .header .primary-menu ul li i,
+  .header .primary-menu ul li:hover a,
+  .header.fixed-header .primary-menu ul li a,
+  .header.fixed-header .primary-menu ul li i,
+  .header.fixed-header .primary-menu ul li:hover a {
+    color: #fff;
+  }
   .header .responsive-block {
     position: absolute;
     right: 65px;
@@ -71,8 +79,9 @@ body {
   .header #lang-mobile {
     display: block;
   }
-}
-@media only screen and (min-width: 500px) {
+  .header .primary-menu ul li.has-menu-child ul.sub-menu a:before {
+    left: 0px;
+  }
 }
 .form-field.selectorZona {
   width: 50%;
@@ -110,9 +119,6 @@ body {
   min-width: auto;
   border-radius: 0.25rem;
   padding: 15px;
-}
-.btn-default:hover {
-  /*color: #4c5667;*/
 }
 .btn-register {
   min-width: auto;
